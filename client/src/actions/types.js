@@ -1,0 +1,31 @@
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const USER_LOADED = "USER_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+
+export const ADD_STADIUM = "ADD_STADIUM";
+export const EDIT_STADIUM = "EDIT_STADIUM";
+export const SEARCH_STADIUMS = "SEARCH_STADIUMS";
+export const FILTER_STADIUMS = "FILTER_STADIUMS";
+export const CLEAR_FILTER = "CLEAR_FILTER";
+
+export const GET_STADIUM = "GET_STADIUM";
+export const GET_STADIUMS = "GET_STADIUMS";
+export const UPDATE_STADIUM = "UPDATE_STADIUM";
+export const DELETE_STADIUM = "DELETE_STADIUM";
+export const CLEAR_STADIUM = "CLEAR_STADIUM";
+export const CLEAR_PROFILE = "CLEAR_PROFILE";
+export const STADIUM_ERROR = "STADIUM_ERROR";
+export const ACCOUNT_DELETED = "ACCOUNT_DELETED";
+export const GET_COMMENTS = "GET_COMMENTS";
+export const COMMENT_ERROR = "COMMENT_ERROR";
+export const UPDATE_LIKES = "UPDATE_LIKES";
+export const REMOVE_COMMENT = "REMOVE_COMMENT";
+export const GET_COMMENT = "GET_COMMENT";
+export const ADD_COMMENT = "ADD_COMMENT";
+export const EDIT_COMMENT = "EDIT_COMMENT";
