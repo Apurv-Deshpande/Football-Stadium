@@ -1,6 +1,4 @@
 {
   "mongoURI": "mongodb+srv://Apurv:mongodb@cluster0-hexwf.mongodb.net/football?retryWrites=true",
-  "jwtSecret": "secret",
-  "githubClientId": "",
-  "githubSecret": ""
+  "jwtSecret": "secret"
 }

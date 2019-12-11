@@ -108,7 +108,7 @@ router.get("/:id", async (req, res) => {
     if (!stadium) {
       return res.status(404).json({ msg: "Stadium not found" });
     }
-    3;
+
     res.json(stadium);
   } catch (err) {
     console.error(err.message);

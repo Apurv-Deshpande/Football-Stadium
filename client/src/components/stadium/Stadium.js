@@ -27,41 +27,47 @@ const Stadium = ({
       {stadium === null || loading ? (
         <Spinner />
       ) : (
-        <Fragment>
-          {auth.isAuthenticated &&
-            auth.loading === false &&
-            auth.user._id === stadium.user && (
-              <Link to="/edit-stadium" className="btn btn-dark">
-                Edit Stadium
+          <Fragment>
+            {auth.isAuthenticated &&
+              auth.loading === false &&
+              auth.user._id === stadium.user && (
+                <Link to="/edit-stadium" className="btn btn-dark">
+                  Edit Stadium
               </Link>
+              )}
+
+            {auth.isAuthenticated &&
+              auth.loading === false &&
+              auth.user._id === stadium.user && (
+                <button
+                  onClick={e => deleteStadium(stadium._id)}
+                  type="button"
+                  class="btn btn-danger"
+                >
+                  <i class="fas fa-times" />
+                </button>
+              )}
+
+            <StadiumInfo stadium={stadium} />
+
+            {auth.isAuthenticated && auth.loading === false && (
+              <CommentForm stadiumId={stadium._id} />
             )}
 
-          {auth.isAuthenticated &&
-            auth.loading === false &&
-            auth.user._id === stadium.user && (
-              <button
-                onClick={e => deleteStadium(stadium._id)}
-                type="button"
-                class="btn btn-danger"
-              >
-                <i class="fas fa-times" />
-              </button>
+            {auth.isAuthenticated && auth.loading === false && (
+              <div className="comments">
+                {stadium.comments.map(comment => (
+                  <CommentItem
+                    key={comment._id}
+                    comment={comment}
+                    stadiumId={stadium._id}
+                  />
+                ))}
+              </div>
             )}
 
-          <StadiumInfo stadium={stadium} />
-
-          <CommentForm stadiumId={stadium._id} />
-          <div className="comments">
-            {stadium.comments.map(comment => (
-              <CommentItem
-                key={comment._id}
-                comment={comment}
-                stadiumId={stadium._id}
-              />
-            ))}
-          </div>
-        </Fragment>
-      )}
+          </Fragment>
+        )}
     </Fragment>
   );
 };

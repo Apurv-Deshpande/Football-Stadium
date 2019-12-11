@@ -19,7 +19,7 @@ const StadiumInfo = ({
         <b>Cost</b>: £{cost}
       </Card.Text>
       <Card.Text>
-        <b>Description</b>: {location}
+        <b>Location</b>: {location}
       </Card.Text>
     </Card>
   );
